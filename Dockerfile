@@ -1,4 +1,4 @@
-FROM inokappa/wheezy-basic:latest
+FROM inokappa/wheezy-7.2-basic:latest
 MAINTAINER Yohei Kawahara "inokara@gmail.com"
 
 RUN apt-get update
