@@ -12,6 +12,7 @@ RUN apt-get install -y libhiredis-dev
 RUN apt-get install -y libmarkdown2-dev
 RUN apt-get install -y libcap-dev
 RUN apt-get install -y libcgroup-dev
+RUN apt-get install -y vim
 
 RUN cd /root/ && git clone git://github.com/matsumoto-r/mod_mruby.git
 RUN chmod 755 /root/mod_mruby/build.sh
