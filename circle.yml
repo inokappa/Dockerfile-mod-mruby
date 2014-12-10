@@ -2,6 +2,12 @@ machine:
   services:
     - docker
 
+dependencies:
+  override:
+    - docker info
+    - docker build -t circleci/elasticsearch .
+
 test:
-  post:
-    - docker run -t -i centos echo "a"
+  override:
+    - docker run -d -p 9200:9200 circleci/elasticsearch; sleep 10
+    - curl --retry 10 --retry-delay 5 -v http://localhost:9200
