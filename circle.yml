@@ -1,3 +1,7 @@
 machine:
   services:
     - docker
+
+test:
+  post:
+    - docker run -t -i centos echo "a"
